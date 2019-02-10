@@ -134,18 +134,23 @@ header{
 
 
 .blog{
+    display: flex;
     flex-flow: row wrap;
-    width: 66.6%;
+    float: left;
+    width: 66.6%; 
 }
 
 h3.heading{
     display: block;
+    font-size: 1.5rem;
     margin: 5% 2% 1%;
     text-align: center;
 }
 
 .blog-item{
-    margin: 2%;
+    background-color:#F7F8FA;
+    margin: 10px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -154,7 +159,7 @@ h3.heading{
 }
 
 .one-third{
-    width: calc(50% - 4%);
+    width: calc(50% - 20px);
 }
 
 .one-third p{
@@ -163,7 +168,7 @@ h3.heading{
 }
 
 .two-thirds{
-    width: calc(100% - 4%);
+    width: calc(100% - 20px);
 }
 
 .two-thirds p{
@@ -171,8 +176,8 @@ h3.heading{
     padding: 1% 7%;
 }
 
-.blog-photo{
-    margin: 0;
+.photo{
+    margin: 0 auto;
 }
 
 figcaption .heading{
@@ -185,7 +190,7 @@ figcaption .heading{
     font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 1px;
-    padding: 2% 5%;
+    padding: 5px 15px;
     transition: border 0.3s, background-color 0.3s, color 0.3s;
 }
 
@@ -195,12 +200,34 @@ figcaption .heading{
     color: white;
 }
 
+main {
+    position: relative;
+}
+
+main .about-button-480{
+    display: none;
+}
+
+/* ABOUT CSS */
+
+.about{
+    background-color: 	#F7F8FA;
+    float: right;
+    margin: 10px;
+    width: calc(33.3% - 20px);
+}
+
+.about p{
+    line-height: 1.5rem;
+    padding: 3% 10%;
+}
+
 
  /* Portrait tablet and small desktops */
  @media (max-width: 1280px) {
     .wrapper{
         margin: 0 auto;
-        width: 80%;
+        width: 85%;
     }
 
     .logo{
@@ -210,12 +237,29 @@ figcaption .heading{
     nav{
         min-width: 70%;
     }
+
+    .blog-item,
+    .about{
+        margin: 5px;
+    }
+
+    .one-third{
+        width: calc(50% - 10px);
+    }
+    
+    .two-thirds{
+        width: calc(100% - 10px);
+    }
+
+    .about{
+        width: calc(33.3% - 10px);
+    }
 }
 
 
  /* Portrait tablet and small desktops */
  @media (max-width: 980px) {
-    .flexContainer {
+   .flexContainer {
         flex-direction: column;
     }
 
@@ -228,9 +272,8 @@ figcaption .heading{
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-    /* keep textbox from breaking open */
     .wrapper {
-        width: 100%;
+        width: 95%;
     }
 
     .logo{
@@ -278,15 +321,36 @@ figcaption .heading{
 
     header{
         background-size: contain;
-        flex-direction: column;
+        /* flex-direction: column; */
     }
 
     .textbox h2{
         font-size: 1.3rem;
     }
+
     .textbox p{
         font-size: 1rem;
     } 
+
+    main .about-button-480{
+        color: red;
+        display: inline;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        position: absolute;
+        top: 10px; 
+        right: 35px;
+    }
+
+    .about{
+        display: none;
+    }
+
+    main .about-button-480:focus.about{
+        display: block;
+    }
+    
 }
 
 /* Landscape phones and down */

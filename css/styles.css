@@ -106,9 +106,12 @@ header{
     background-image: url("../assets/image-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+header .photo{
+    display: none;
 }
 
 .textbox{
@@ -132,6 +135,9 @@ header{
 
 /* BLOG CSS */
 
+main{
+    padding: 5%;
+}
 
 .blog{
     display: flex;
@@ -147,19 +153,19 @@ h3.heading{
     text-align: center;
 }
 
-.blog-item{
+.posts{
     background-color:#F7F8FA;
-    margin: 10px;
+    margin: 15px;
     padding-bottom: 20px;
     text-align: center;
 }
 
-.blog-item p{
+.posts p{
     text-align: left;
 }
 
 .one-third{
-    width: calc(50% - 20px);
+    width: calc(50% - 30px);
 }
 
 .one-third p{
@@ -168,7 +174,7 @@ h3.heading{
 }
 
 .two-thirds{
-    width: calc(100% - 20px);
+    width: calc(100% - 30px);
 }
 
 .two-thirds p{
@@ -184,7 +190,7 @@ figcaption .heading{
     margin-bottom: 0;
 }
 
-.blog-item a{
+.posts a{
     border-radius: 10px;
     color: red;
     font-size: 0.9rem;
@@ -194,18 +200,10 @@ figcaption .heading{
     transition: border 0.3s, background-color 0.3s, color 0.3s;
 }
 
-.blog-item a:hover{
+.posts a:hover{
     background-color: red;
     border: 1px solid red;
     color: white;
-}
-
-main {
-    position: relative;
-}
-
-main .about-button-480{
-    display: none;
 }
 
 /* ABOUT CSS */
@@ -213,8 +211,8 @@ main .about-button-480{
 .about{
     background-color: 	#F7F8FA;
     float: right;
-    margin: 10px;
-    width: calc(33.3% - 20px);
+    margin: 15px;
+    width: calc(33.3% - 30px);
 }
 
 .about p{
@@ -222,6 +220,20 @@ main .about-button-480{
     padding: 3% 10%;
 }
 
+/* RELATED POSTS */
+
+.related {
+    display: flex;
+}
+
+aside{
+    background-color: #F7F8FA;
+    padding: 5%;
+}
+
+aside .posts{
+    background-color: white;
+}
 
  /* Portrait tablet and small desktops */
  @media (max-width: 1280px) {
@@ -238,7 +250,7 @@ main .about-button-480{
         min-width: 70%;
     }
 
-    .blog-item,
+    .posts,
     .about{
         margin: 5px;
     }
@@ -289,6 +301,14 @@ main .about-button-480{
         padding: 0.2em;
     }
 
+    header{
+        background-image: none;
+    }
+
+    header .photo{
+        display: block;
+    }
+
     .textbox{
         margin: 0;
         flex: 0 1 auto;
@@ -319,10 +339,6 @@ main .about-button-480{
         border-bottom: 0.5px solid lightgrey;
     }
 
-    header{
-        background-size: contain;
-        /* flex-direction: column; */
-    }
 
     .textbox h2{
         font-size: 1.3rem;
@@ -332,24 +348,31 @@ main .about-button-480{
         font-size: 1rem;
     } 
 
-    main .about-button-480{
-        color: red;
-        display: inline;
-        font-size: 0.9rem;
-        font-weight: 700;
-        letter-spacing: 1px;
-        position: absolute;
-        top: 10px; 
-        right: 35px;
+    .blog{
+        clear: both;
+        width: 100%;
+    }
+
+    .blog .posts{
+        width: 100%;
     }
 
     .about{
-        display: none;
+       margin: 5px;
+       width: calc(100% - 10px);
     }
 
-    main .about-button-480:focus.about{
-        display: block;
+    .related{
+        flex-direction: column;
     }
+
+    .related .posts{
+        margin: 5px;
+        width: calc(100% - 10px);
+    }
+
+
+
     
 }
 

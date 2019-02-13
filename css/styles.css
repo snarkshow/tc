@@ -19,20 +19,9 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 /* GENERAL CSS */
 
-/* 
-font-family: 'Noto Serif', serif;
-font-family: 'Raleway', sans-serif; 
-*/
-
 html{
     font-size: 16px;
 }
-
-.wrapper{
-    margin: 0 auto;
-    width: 1280px;
-}
-
 
 img{
     width: 100%;
@@ -46,6 +35,11 @@ a{
 
 ul{
     list-style-type: none;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 1280px;
 }
 
 .flexContainer {
@@ -68,7 +62,6 @@ p{
 }
 
 /* NAVBAR CSS */
-
 
 .navBar{
     align-items: center;
@@ -270,7 +263,7 @@ footer a{
 
 .footer1 ul{
     line-height: 2;
-    padding-left: 4%;
+    padding: 0 2%;
 }
 
 .footer1 .heading{
@@ -307,6 +300,8 @@ footer a{
     width: calc(50% - 20px);
 }
 
+/* SIGNUP CSS */
+
 form{
     margin-top: 10px;
 }
@@ -338,6 +333,8 @@ input[type=submit] {
     text-transform: uppercase;
     width: 30%;
 }
+
+/* FOOTER & SOCIAL CSS */
 
 .footer2{
     background-color: #231F1E;
@@ -582,6 +579,10 @@ input[type=submit] {
         width: calc(100% - 10px);
     }
 
+     .footerSignup{
+        margin-bottom: 17%; 
+    }
+
     .footer2{
         display: flex;
         flex-direction: column;
@@ -597,7 +598,7 @@ input[type=submit] {
 
     .copyright{
         font-size: 1rem;
-    }
+    }   
 
     .footerSocial{
         display: flex;
@@ -612,6 +613,5 @@ input[type=submit] {
         color: red;
        
     }
-  
-    
+
 }
